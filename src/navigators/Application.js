@@ -4,8 +4,7 @@ import {
 } from '@react-navigation/native';
 import { SafeAreaView, StatusBar } from 'react-native';
 
-import Calendar from '../screens/Calender';
-import CalendarScreen from '../screens/Calender';
+import LoginScreen from '../screens/Login';
 import MainNavigator from './Main';
 import React from 'react';
 import { Startup } from '../screens';
@@ -25,8 +24,8 @@ const ApplicationNavigator = () => {
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Calender" component={CalendarScreen} />
-          <Stack.Screen name="Main" component={MainNavigator} />
+          <Stack.Screen name="Calender" component={LoginScreen} />
+          {/* <Stack.Screen name="Main" component={MainNavigator} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

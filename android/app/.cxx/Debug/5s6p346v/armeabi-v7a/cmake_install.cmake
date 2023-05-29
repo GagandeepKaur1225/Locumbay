@@ -48,6 +48,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/armeabi-v7a/reactnativemmkv_autolinked_build/cmake_install.cmake")
   include("/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/armeabi-v7a/safeareacontext_autolinked_build/cmake_install.cmake")
   include("/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/armeabi-v7a/rnscreens_autolinked_build/cmake_install.cmake")
+  include("/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/armeabi-v7a/rnsvg_autolinked_build/cmake_install.cmake")
 
 endif()
 

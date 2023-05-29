@@ -13,3 +13,6 @@
 /Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/x86/rnscreens_autolinked_build/CMakeFiles/rebuild_cache.dir
 /Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/x86/rnscreens_autolinked_build/CMakeFiles/edit_cache.dir
 /Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/x86/rnscreens_autolinked_build/CMakeFiles/react_codegen_rnscreens.dir
+/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/x86/rnsvg_autolinked_build/CMakeFiles/rebuild_cache.dir
+/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/x86/rnsvg_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/hidayatrehmat/Documents/gagan/Calender/android/app/.cxx/Debug/5s6p346v/x86/rnsvg_autolinked_build/CMakeFiles/react_codegen_rnsvg.dir
