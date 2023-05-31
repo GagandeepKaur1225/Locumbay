@@ -10,13 +10,14 @@ export const style = StyleSheet.create({
   textLogin: {
     fontWeight: '700',
     alignSelf: 'center',
-    fontSize: RFValue(20),
+    fontSize: RFValue(22),
     marginTop: '12%',
+    color: '#104651'
   },
   logo: { alignSelf: 'center', top: '5%' },
   forgotPass: {
     flexDirection: 'row',
-    width: widthPercentageToDP('85%'),
+    width: widthPercentageToDP('90%'),
     alignSelf: 'center',
     justifyContent: 'space-between',
   },

@@ -5,14 +5,11 @@ import {
 import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { style } from './style';
-
-const CustomButton = ({ ...props }) => {
+const GoogleSign = () => {
   useEffect(() => {
     GoogleSignin.configure();
+    signIn();
   }, []);
-
   const signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
@@ -30,19 +27,11 @@ const CustomButton = ({ ...props }) => {
       }
     }
   };
-
   return (
-    <>
-      <TouchableOpacity
-        style={style.socialButton}
-        onPress={() => props.onClick()}
-      >
-        <Text style={{ color: '#104651', fontWeight: '600' }}>
-          {props.title}
-        </Text>
-      </TouchableOpacity>
-    </>
+    <View>
+      <Text>index</Text>
+    </View>
   );
 };
 
-export default CustomButton;
+export default GoogleSign;
