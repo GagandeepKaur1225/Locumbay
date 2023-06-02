@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "944322022484-kpl6457ha1bsk494c3c7k8k7u4fc415q.apps.googleusercontent.com",
+          "client_id": "944322022484-0e2sj81c6pb5vdp2m0b62movune1oss2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.locumbay.myapp",
-            "certificate_hash": "929daf0bdc8509a3f5e427ae03819d87616f7fee"
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
           }
         }
       ],

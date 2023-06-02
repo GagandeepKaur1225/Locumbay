@@ -10,7 +10,7 @@ const CustomInput = ({ ...props }) => {
   const [focused, setFocused] = useState();
   const [ShowPass, setShowPass] = useState();
   return (
-    <View style={{ alignSelf: 'center', padding: 20 }}>
+    <View style={{ alignSelf: 'center', padding: 8 }}>
       <Text style={style.headerStyle}>{props?.header}</Text>
       <Text />
       <View

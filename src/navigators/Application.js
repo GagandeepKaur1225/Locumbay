@@ -25,12 +25,13 @@ const ApplicationNavigator = () => {
   const data = useSelector(data => data.userInfo);
   console.log(data, 'data in the application.js');
   return (
-    <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
+    <SafeAreaView style={[Layout.fill, { backgroundColor: '#000' }]}>
       {data.idUser || data.email ? (
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
           <StatusBar
             barStyle={darkMode ? 'light-content' : 'dark-content'}
-            backgroundColor="#000"
+            backgroundColor="#fff"
+            translucent={false}
           />
           <Stack.Navigator
             screenOptions={{ headerShown: false }}

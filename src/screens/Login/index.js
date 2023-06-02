@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { addFacebookToken, saveUser } from '../../store/userInfo';
 
-import CheckBox from 'react-native-check-box';
 import CustomButton from '../../components/CustomButton';
 import FacebookLogo from '../../assets/images/facebookLogo.svg';
 import { FontSize } from '../../theme/Variables';
@@ -30,6 +29,7 @@ const LoginScreen = () => {
   }, []);
   const signIn = async () => {
     try {
+      console.log('in try of google sign in');
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log(userInfo, 'user info required is');
@@ -39,11 +39,17 @@ const LoginScreen = () => {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
       } else if (error.code === statusCodes.IN_PROGRESS) {
+        console.log(' error ');
         // operation (e.g. sign in) is in progress already
+        console.log('sign in in progress');
       } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        console.log('play services not available');
         // play services not available or outdated
+      } else if (error) {
+        console.log(error);
       } else {
         // some other error happened
+        console.log('else');
       }
     }
   };
@@ -76,7 +82,7 @@ const LoginScreen = () => {
 
   return (
     <KeyboardAwareScrollView
-      style={{ flex: 1, padding: 10 }}
+      style={{ flex: 1, padding:5 }}
       showsVerticalScrollIndicator={false}
     >
       <View style={style.logo}>
