@@ -1,4 +1,4 @@
-package com.myapp;
+package com.locumbay.myapp;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;

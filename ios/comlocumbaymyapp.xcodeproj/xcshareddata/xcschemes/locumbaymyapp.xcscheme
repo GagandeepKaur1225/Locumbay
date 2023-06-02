@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "locumbaymyapp.app"
-               BlueprintName = "locumbaymyapp"
-               ReferencedContainer = "container:locumbaymyapp.xcodeproj">
+               BuildableName = "comlocumbaymyapp.app"
+               BlueprintName = "comlocumbaymyapp"
+               ReferencedContainer = "container:comlocumbaymyapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "locumbaymyappTests.xctest"
-               BlueprintName = "locumbaymyappTests"
-               ReferencedContainer = "container:locumbaymyapp.xcodeproj">
+               BuildableName = "comlocumbaymyappTests.xctest"
+               BlueprintName = "comlocumbaymyappTests"
+               ReferencedContainer = "container:comlocumbaymyapp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "locumbaymyapp.app"
-            BlueprintName = "locumbaymyapp"
-            ReferencedContainer = "container:locumbaymyapp.xcodeproj">
+            BuildableName = "comlocumbaymyapp.app"
+            BlueprintName = "comlocumbaymyapp"
+            ReferencedContainer = "container:comlocumbaymyapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "locumbaymyapp.app"
-            BlueprintName = "locumbaymyapp"
-            ReferencedContainer = "container:locumbaymyapp.xcodeproj">
+            BuildableName = "comlocumbaymyapp.app"
+            BlueprintName = "comlocumbaymyapp"
+            ReferencedContainer = "container:comlocumbaymyapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

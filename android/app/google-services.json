@@ -7,12 +7,21 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:944322022484:android:878e84ad7ea8b9904af1c1",
+        "mobilesdk_app_id": "1:944322022484:android:bbb542649bc602644af1c1",
         "android_client_info": {
-          "package_name": "com.myapp"
+          "package_name": "com.locumbay.myapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "944322022484-kpl6457ha1bsk494c3c7k8k7u4fc415q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.locumbay.myapp",
+            "certificate_hash": "929daf0bdc8509a3f5e427ae03819d87616f7fee"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB3pOHDKsK7plQ7ClsTbIjjflukec6JJQg"
@@ -20,7 +29,15 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944322022484-a2q0k1bku3lufio71o5lfktb0tj5lqs7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Locumbay"
+              }
+            }
+          ]
         }
       }
     }

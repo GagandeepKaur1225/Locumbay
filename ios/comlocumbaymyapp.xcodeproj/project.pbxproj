@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* locumbaymyappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* locumbaymyappTests.m */; };
+		00E356F31AD99517003FC87E /* comlocumbaymyappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* comlocumbaymyappTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1DA5E97543438914D2D99469 /* libPods-locumbaymyapp-locumbaymyappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099D4ACF14DA554476A09169 /* libPods-locumbaymyapp-locumbaymyappTests.a */; };
+		1DA5E97543438914D2D99469 /* libPods-comlocumbaymyapp-comlocumbaymyappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099D4ACF14DA554476A09169 /* libPods-comlocumbaymyapp-comlocumbaymyappTests.a */; };
 		221111FE2A285AEC000E5619 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 221111FD2A285AEC000E5619 /* GoogleService-Info.plist */; };
-		41177C31925F4089B945AC36 /* libPods-locumbaymyapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA79C0D9E1831FC06454825 /* libPods-locumbaymyapp.a */; };
+		41177C31925F4089B945AC36 /* libPods-comlocumbaymyapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA79C0D9E1831FC06454825 /* libPods-comlocumbaymyapp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -23,29 +23,29 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = "locumbaymyapp";
+			remoteInfo = "comlocumbaymyapp";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* locumbaymyappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "locumbaymyappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* comlocumbaymyappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "comlocumbaymyappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* locumbaymyappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "locumbaymyappTests.m"; sourceTree = "<group>"; };
-		099D4ACF14DA554476A09169 /* libPods-locumbaymyapp-locumbaymyappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-locumbaymyapp-locumbaymyappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* locumbaymyapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "locumbaymyapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "locumbaymyapp/AppDelegate.h"; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "locumbaymyapp/AppDelegate.mm"; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "locumbaymyapp/Images.xcassets"; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "locumbaymyapp/Info.plist"; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "locumbaymyapp/main.m"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* comlocumbaymyappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "comlocumbaymyappTests.m"; sourceTree = "<group>"; };
+		099D4ACF14DA554476A09169 /* libPods-comlocumbaymyapp-comlocumbaymyappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-comlocumbaymyapp-comlocumbaymyappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* comlocumbaymyapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "comlocumbaymyapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "comlocumbaymyapp/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "comlocumbaymyapp/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "comlocumbaymyapp/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "comlocumbaymyapp/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "comlocumbaymyapp/main.m"; sourceTree = "<group>"; };
 		221111FD2A285AEC000E5619 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		225478D22A27850800134FD1 /* locumbaymyapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = locumbaymyapp.entitlements; path = locumbaymyapp/locumbaymyapp.entitlements; sourceTree = "<group>"; };
-		433F6C3F8A715DD3A1DD473B /* Pods-locumbaymyapp-locumbaymyappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locumbaymyapp-locumbaymyappTests.release.xcconfig"; path = "Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests.release.xcconfig"; sourceTree = "<group>"; };
-		4370CCFBBC5DE4E63A93128C /* Pods-locumbaymyapp-locumbaymyappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locumbaymyapp-locumbaymyappTests.debug.xcconfig"; path = "Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4AA79C0D9E1831FC06454825 /* libPods-locumbaymyapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-locumbaymyapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E5CABA920B96C6FDBF59653 /* Pods-locumbaymyapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locumbaymyapp.release.xcconfig"; path = "Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "locumbaymyapp/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		DCF39B6C2B6F99CC6DEC43D5 /* Pods-locumbaymyapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locumbaymyapp.debug.xcconfig"; path = "Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp.debug.xcconfig"; sourceTree = "<group>"; };
+		225478D22A27850800134FD1 /* comlocumbaymyapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = comlocumbaymyapp.entitlements; path = comlocumbaymyapp/comlocumbaymyapp.entitlements; sourceTree = "<group>"; };
+		433F6C3F8A715DD3A1DD473B /* Pods-comlocumbaymyapp-comlocumbaymyappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-comlocumbaymyapp-comlocumbaymyappTests.release.xcconfig"; path = "Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests.release.xcconfig"; sourceTree = "<group>"; };
+		4370CCFBBC5DE4E63A93128C /* Pods-comlocumbaymyapp-comlocumbaymyappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-comlocumbaymyapp-comlocumbaymyappTests.debug.xcconfig"; path = "Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AA79C0D9E1831FC06454825 /* libPods-comlocumbaymyapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-comlocumbaymyapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5CABA920B96C6FDBF59653 /* Pods-comlocumbaymyapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-comlocumbaymyapp.release.xcconfig"; path = "Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "comlocumbaymyapp/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		DCF39B6C2B6F99CC6DEC43D5 /* Pods-comlocumbaymyapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-comlocumbaymyapp.debug.xcconfig"; path = "Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DA5E97543438914D2D99469 /* libPods-locumbaymyapp-locumbaymyappTests.a in Frameworks */,
+				1DA5E97543438914D2D99469 /* libPods-comlocumbaymyapp-comlocumbaymyappTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,20 +62,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41177C31925F4089B945AC36 /* libPods-locumbaymyapp.a in Frameworks */,
+				41177C31925F4089B945AC36 /* libPods-comlocumbaymyapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* locumbaymyappTests */ = {
+		00E356EF1AD99517003FC87E /* comlocumbaymyappTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* locumbaymyappTests.m */,
+				00E356F21AD99517003FC87E /* comlocumbaymyappTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = "locumbaymyappTests";
+			path = "comlocumbaymyappTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -86,11 +86,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* locumbaymyapp */ = {
+		13B07FAE1A68108700A75B9A /* comlocumbaymyapp */ = {
 			isa = PBXGroup;
 			children = (
 				221111FD2A285AEC000E5619 /* GoogleService-Info.plist */,
-				225478D22A27850800134FD1 /* locumbaymyapp.entitlements */,
+				225478D22A27850800134FD1 /* comlocumbaymyapp.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -98,15 +98,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = "locumbaymyapp";
+			name = "comlocumbaymyapp";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				4AA79C0D9E1831FC06454825 /* libPods-locumbaymyapp.a */,
-				099D4ACF14DA554476A09169 /* libPods-locumbaymyapp-locumbaymyappTests.a */,
+				4AA79C0D9E1831FC06454825 /* libPods-comlocumbaymyapp.a */,
+				099D4ACF14DA554476A09169 /* libPods-comlocumbaymyapp-comlocumbaymyappTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* locumbaymyapp */,
+				13B07FAE1A68108700A75B9A /* comlocumbaymyapp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* locumbaymyappTests */,
+				00E356EF1AD99517003FC87E /* comlocumbaymyappTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -136,8 +136,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* locumbaymyapp.app */,
-				00E356EE1AD99517003FC87E /* locumbaymyappTests.xctest */,
+				13B07F961A680F5B00A75B9A /* comlocumbaymyapp.app */,
+				00E356EE1AD99517003FC87E /* comlocumbaymyappTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,10 +145,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DCF39B6C2B6F99CC6DEC43D5 /* Pods-locumbaymyapp.debug.xcconfig */,
-				4E5CABA920B96C6FDBF59653 /* Pods-locumbaymyapp.release.xcconfig */,
-				4370CCFBBC5DE4E63A93128C /* Pods-locumbaymyapp-locumbaymyappTests.debug.xcconfig */,
-				433F6C3F8A715DD3A1DD473B /* Pods-locumbaymyapp-locumbaymyappTests.release.xcconfig */,
+				DCF39B6C2B6F99CC6DEC43D5 /* Pods-comlocumbaymyapp.debug.xcconfig */,
+				4E5CABA920B96C6FDBF59653 /* Pods-comlocumbaymyapp.release.xcconfig */,
+				4370CCFBBC5DE4E63A93128C /* Pods-comlocumbaymyapp-comlocumbaymyappTests.debug.xcconfig */,
+				433F6C3F8A715DD3A1DD473B /* Pods-comlocumbaymyapp-comlocumbaymyappTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* locumbaymyappTests */ = {
+		00E356ED1AD99517003FC87E /* comlocumbaymyappTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "locumbaymyappTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "comlocumbaymyappTests" */;
 			buildPhases = (
 				A844B94B3E5090D3959EAA43 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -172,14 +172,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = locumbaymyappTests;
-			productName = locumbaymyappTests;
-			productReference = 00E356EE1AD99517003FC87E /* locumbaymyappTests.xctest */;
+			name = comlocumbaymyappTests;
+			productName = comlocumbaymyappTests;
+			productReference = 00E356EE1AD99517003FC87E /* comlocumbaymyappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* locumbaymyapp */ = {
+		13B07F861A680F5B00A75B9A /* comlocumbaymyapp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "locumbaymyapp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "comlocumbaymyapp" */;
 			buildPhases = (
 				E4F9F646DEB46E974051956D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -194,9 +194,9 @@
 			);
 			dependencies = (
 			);
-			name = "locumbaymyapp";
-			productName = "locumbaymyapp";
-			productReference = 13B07F961A680F5B00A75B9A /* locumbaymyapp.app */;
+			name = "comlocumbaymyapp";
+			productName = "comlocumbaymyapp";
+			productReference = 13B07F961A680F5B00A75B9A /* comlocumbaymyapp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "locumbaymyapp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "comlocumbaymyapp" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -232,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* locumbaymyapp */,
-				00E356ED1AD99517003FC87E /* locumbaymyappTests */,
+				13B07F861A680F5B00A75B9A /* comlocumbaymyapp */,
+				00E356ED1AD99517003FC87E /* comlocumbaymyappTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,15 +281,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6FD2EC3E0F667FBA1A51F1CA /* [CP] Embed Pods Frameworks */ = {
@@ -298,15 +298,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A844B94B3E5090D3959EAA43 /* [CP] Check Pods Manifest.lock */ = {
@@ -324,7 +324,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-locumbaymyapp-locumbaymyappTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-comlocumbaymyapp-comlocumbaymyappTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -337,15 +337,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp/Pods-locumbaymyapp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp/Pods-comlocumbaymyapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E4F9F646DEB46E974051956D /* [CP] Check Pods Manifest.lock */ = {
@@ -363,7 +363,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-locumbaymyapp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-comlocumbaymyapp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -376,15 +376,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-locumbaymyapp-locumbaymyappTests/Pods-locumbaymyapp-locumbaymyappTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-comlocumbaymyapp-comlocumbaymyappTests/Pods-comlocumbaymyapp-comlocumbaymyappTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -413,7 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* locumbaymyappTests.m in Sources */,
+				00E356F31AD99517003FC87E /* comlocumbaymyappTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +431,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* locumbaymyapp */;
+			target = 13B07F861A680F5B00A75B9A /* comlocumbaymyapp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -439,14 +439,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4370CCFBBC5DE4E63A93128C /* Pods-locumbaymyapp-locumbaymyappTests.debug.xcconfig */;
+			baseConfigurationReference = 4370CCFBBC5DE4E63A93128C /* Pods-comlocumbaymyapp-comlocumbaymyappTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "locumbaymyappTests/Info.plist";
+				INFOPLIST_FILE = "comlocumbaymyappTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,17 +460,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/locumbaymyapp.app/locumbaymyapp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/comlocumbaymyapp.app/comlocumbaymyapp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 433F6C3F8A715DD3A1DD473B /* Pods-locumbaymyapp-locumbaymyappTests.release.xcconfig */;
+			baseConfigurationReference = 433F6C3F8A715DD3A1DD473B /* Pods-comlocumbaymyapp-comlocumbaymyappTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = "locumbaymyappTests/Info.plist";
+				INFOPLIST_FILE = "comlocumbaymyappTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,23 +484,23 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/locumbaymyapp.app/locumbaymyapp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/comlocumbaymyapp.app/comlocumbaymyapp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCF39B6C2B6F99CC6DEC43D5 /* Pods-locumbaymyapp.debug.xcconfig */;
+			baseConfigurationReference = DCF39B6C2B6F99CC6DEC43D5 /* Pods-comlocumbaymyapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = locumbaymyapp/locumbaymyapp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = comlocumbaymyapp/comlocumbaymyapp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LPRPC642LQ;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "locumbaymyapp/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "locumbay.myapp";
-				INFOPLIST_KEY_CFBundleDisplayName = locumbaymyapp;
+				INFOPLIST_FILE = "comlocumbaymyapp/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "com.locumbay.myapp";
+				INFOPLIST_KEY_CFBundleDisplayName = comlocumbaymyapp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,7 +512,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "locumbaymyapp";
+				PRODUCT_NAME = "comlocumbaymyapp";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -521,16 +521,16 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E5CABA920B96C6FDBF59653 /* Pods-locumbaymyapp.release.xcconfig */;
+			baseConfigurationReference = 4E5CABA920B96C6FDBF59653 /* Pods-comlocumbaymyapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = locumbaymyapp/locumbaymyapp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = comlocumbaymyapp/comlocumbaymyapp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LPRPC642LQ;
-				INFOPLIST_FILE = "locumbaymyapp/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "locumbay.myapp";
-				INFOPLIST_KEY_CFBundleDisplayName = locumbaymyapp;
+				INFOPLIST_FILE = "comlocumbaymyapp/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "com.locumbay.myapp";
+				INFOPLIST_KEY_CFBundleDisplayName = comlocumbaymyapp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,7 +542,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "locumbaymyapp";
+				PRODUCT_NAME = "comlocumbaymyapp";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -688,7 +688,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "locumbaymyappTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "comlocumbaymyappTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -697,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "locumbaymyapp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "comlocumbaymyapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -706,7 +706,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "locumbaymyapp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "comlocumbaymyapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
