@@ -3,9 +3,6 @@ apply plugin: "com.facebook.react"
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 import com.android.build.OutputFile
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
-
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -96,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.myapp"
+    namespace "com.locumbay.myapp"
     defaultConfig {
-        applicationId "com.myapp"
+        applicationId "com.locumbay.myapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
