@@ -12,7 +12,7 @@
 	<key>FacebookDisplayName</key>
 	<string>Locumbay</string>
 	<key>CFBundleDisplayName</key>
-	<string>com.locumbay.myapp</string>
+	<string>Locumabay</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">com.locumbay.myapp</string>
+    <string name="app_name">Locumabay</string>
     <string name="facebook_app_id">225018763231230</string>
 <string name="facebook_client_token">164d240f4cb5dbb9b1fd7430bdeef99d</string>
 </resources>
