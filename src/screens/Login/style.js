@@ -11,10 +11,10 @@ export const style = StyleSheet.create({
     fontWeight: '700',
     alignSelf: 'center',
     fontSize: RFValue(22),
-    marginTop: '12%',
-    color: '#104651'
+    marginTop: '10%',
+    color: '#104651',
   },
-  logo: { alignSelf: 'center', top: '5%' },
+  logo: { alignSelf: 'center', top: '2%' },
   forgotPass: {
     flexDirection: 'row',
     width: widthPercentageToDP('90%'),
@@ -24,11 +24,12 @@ export const style = StyleSheet.create({
   rememberMe: {
     flexDirection: 'row',
     width: '40%',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
   },
   forgotPassText: {
     fontWeight: '600',
     color: '#104651',
+    alignSelf: 'center',
   },
   loginButton: {
     height: heightPercentageToDP('8%'),
@@ -43,18 +44,30 @@ export const style = StyleSheet.create({
   loginText: {
     color: '#FFFFFF',
     fontWeight: '600',
-    fontSize: RFValue(24),
+    fontSize: RFValue(22),
     padding: 5,
   },
   socialButtons: {
     flexDirection: 'row',
-    width: widthPercentageToDP('88%'),
+    width: widthPercentageToDP('90%'),
     alignSelf: 'center',
     justifyContent: 'space-between',
   },
   registerText: {
     color: '#104651',
     fontWeight: '700',
-    borderBottomWidth: 0.3,
+    textDecorationLine: 'underline',
+    fontSize:RFValue(18)
+  },
+  errorMail: {
+    width: widthPercentageToDP('88%'),
+    alignSelf: 'center',
+    color: 'red',
+  },
+  Register: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    marginTop: '5%',
+    marginBottom: '4%',
   },
 });

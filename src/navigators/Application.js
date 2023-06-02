@@ -8,6 +8,7 @@ import Home from './Home';
 import LoginScreen from '../screens/Login';
 import MainNavigator from './Main';
 import React from 'react';
+import ResetPass from '../screens/ResetPass';
 import { Startup } from '../screens';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFlipper } from '@react-navigation/devtools';
@@ -25,15 +26,19 @@ const ApplicationNavigator = () => {
   console.log(data, 'data in the application.js');
   return (
     <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
-      {data.idUser ? (
+      {data.idUser || data.email ? (
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
-          <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
+          <StatusBar
+            barStyle={darkMode ? 'light-content' : 'dark-content'}
+            backgroundColor="#000"
+          />
           <Stack.Navigator
             screenOptions={{ headerShown: false }}
             initialRouteName="Home"
           >
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="ResetPass" component={ResetPass} />
           </Stack.Navigator>
         </NavigationContainer>
       ) : (
@@ -42,6 +47,7 @@ const ApplicationNavigator = () => {
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="ResetPass" component={ResetPass} />
           </Stack.Navigator>
         </NavigationContainer>
       )}

@@ -1,19 +1,22 @@
+import { AccessToken, LoginManager, Settings } from 'react-native-fbsdk-next';
 import {
   GoogleSignin,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
-import React, { useEffect } from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { addFacebookToken, saveUser } from '../../store/userInfo';
 
 import CheckBox from 'react-native-check-box';
 import CustomButton from '../../components/CustomButton';
-import CustomInput from '../../components/CustomInput';
-import HidePass from '../../assets/images/hide_pwd_icon.svg';
+import FacebookLogo from '../../assets/images/facebookLogo.svg';
+import { FontSize } from '../../theme/Variables';
+import GoogleLogo from '../../assets/images/googleLogo.svg';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import LoginManually from './LoginManually';
 import Logo from '../../assets/images/iconMain.svg';
-import Remember from '../../assets/images/Checkbox.svg';
-import ShowPass from '../../assets/images/passShow.svg';
-import UserLogo from '../../assets/images/user.svg';
-import { saveUser } from '../../store/userInfo';
+import { RFValue } from 'react-native-responsive-fontsize';
+// import auth from '@react-native-firebase/auth';
 import { style } from './style';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
@@ -23,6 +26,7 @@ const LoginScreen = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     GoogleSignin.configure();
+    Settings.initializeSDK();
   }, []);
   const signIn = async () => {
     try {
@@ -43,64 +47,71 @@ const LoginScreen = () => {
       }
     }
   };
+
+  const facebookLogin = async () => {
+    try {
+      const result = await LoginManager.logInWithPermissions([
+        'public_profile',
+        'email',
+      ]);
+      if (result.isCancelled) {
+        console.log('Login cancelled', result);
+      } else {
+        const data = await AccessToken.getCurrentAccessToken();
+        if (data) {
+          console.log('Login successful', data.accessToken);
+          const response = await fetch(
+            `https://graph.facebook.com/v13.0/me?access_token=${data.accessToken}`,
+          );
+          const userData = await response.json();
+          console.log('Facebook user data:', userData);
+          dispatch(addFacebookToken(userData));
+          navigation.navigate('Home');
+        }
+      }
+    } catch (error) {
+      console.log('Login error', error);
+    }
+  };
+
   return (
-    <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
+    <KeyboardAwareScrollView
+      style={{ flex: 1, padding: 10 }}
+      showsVerticalScrollIndicator={false}
+    >
       <View style={style.logo}>
         <Logo />
       </View>
       <View>
         <Text style={style.textLogin}>Login</Text>
       </View>
+      <LoginManually />
       <View>
-        <View>
-          <CustomInput
-            placeholder="Enter email"
-            header="Email"
-            logo={<UserLogo />}
-          />
-        </View>
-        <View>
-          <CustomInput
-            placeholder="Enter Password"
-            header="Password"
-            logo={<ShowPass />}
-            logoHidePass={<HidePass />}
-          />
-        </View>
-      </View>
-      <View style={style.forgotPass}>
-        <View style={style.rememberMe}>
-          <CheckBox
-            style={{ borderColor: '#104651' }}
-            onClick={() => console.log('checkbox pressed')}
-          />
-          <Text style={{ color: '#104651' }}>Remember me</Text>
-        </View>
-        <View>
-          <TouchableOpacity>
-            <Text style={style.forgotPassText}>Forgot Password?</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-      <TouchableOpacity style={style.loginButton}>
-        <Text style={style.loginText}>Login</Text>
-      </TouchableOpacity>
-      <View>
-        <Text style={{ alignSelf: 'center', padding: 10 }}>Or</Text>
+        <Text
+          style={{ alignSelf: 'center', padding: 10, fontSize: RFValue(24) }}
+        >
+          Or
+        </Text>
       </View>
       <View style={style.socialButtons}>
-        <CustomButton title="Google" onClick={() => signIn()} />
-        <CustomButton title="Facebook" />
+        <CustomButton
+          title="Google"
+          onClick={() => signIn()}
+          logoSocial={<GoogleLogo />}
+        />
+        <CustomButton
+          title="Facebook"
+          logoSocial={<FacebookLogo />}
+          onClick={() => facebookLogin()}
+        />
       </View>
-      <View
-        style={{ flexDirection: 'row', alignSelf: 'center', marginTop: '3%' }}
-      >
-        <Text>Don't have an account? </Text>
+      <View style={style.Register}>
+        <Text style={{ fontSize: RFValue(18) }}>Don't have an account? </Text>
         <TouchableOpacity>
           <Text style={style.registerText}> Register Now</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    </KeyboardAwareScrollView>
   );
 };
 
