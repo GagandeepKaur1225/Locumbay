@@ -1,10 +1,33 @@
 import { api } from '../../api';
 export const userApi = api.injectEndpoints({
-    endpoints: build => ({
-        fetchOne: build.query({
-            query: id => `/users/${id}`,
-        }),
+  endpoints: build => ({
+    signIn: build.mutation({
+      query: ({ Email, Password }) => {
+        const formData = new FormData();
+        formData.append('email', Email);
+        formData.append('password', Password);
+        console.log(formData, 'formdata is');
+        return {
+          url: 'auth/login/',
+          method: 'POST',
+          body: formData,
+        };
+      },
     }),
-    overrideExisting: false,
+    recoverPassword: build.mutation({
+      query: ({ email }) => {
+        const formData = new FormData();
+        console.log(email);
+        formData.append('email', email);
+        console.log(formData, 'formdata is');
+        return {
+          url: 'auth/forgotpassword/',
+          method: 'POST',
+          body: formData,
+        };
+      },
+    }),
+  }),
+  overrideExisting: true,
 });
-export const { useLazyFetchOneQuery } = userApi;
+export const { useSignInMutation, useRecoverPasswordMutation } = userApi;

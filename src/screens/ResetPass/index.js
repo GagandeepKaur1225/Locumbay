@@ -1,16 +1,17 @@
+import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
 
-import CustomButton from '../../components/CustomButton';
 import CustomInput from '../../components/CustomInput';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { style } from './style';
 import { useNavigation } from '@react-navigation/native';
+import { useRecoverPasswordMutation } from '../../services/modules/users';
 
 const ResetPass = () => {
+  const [recoverPass] = useRecoverPasswordMutation();
   const navigation = useNavigation();
   const [email, setEmail] = useState();
-  const [emailErr, setEmailErr] = useState();
+  const [emailErr, setEmailErr] = useState('');
   const checkMail = data => {
     const reg =
       /^(([^<>()\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -27,8 +28,24 @@ const ResetPass = () => {
     }
   };
 
+  const recoverPassword = () => {
+    try {
+      recoverPass({ email: email })
+        .then(res => {
+          console.log(res, 'response of recover pass api');
+          Alert.alert(res.data.message);
+        })
+        .catch(err => console.log(err));
+    } catch (err) {
+      console.log(err);
+      Alert.alert('Something went wrong');
+    }
+  };
+
   return (
-    <KeyboardAwareScrollView style={{ flex: 1, padding: 20 }}>
+    <KeyboardAwareScrollView
+      style={{ flex: 1, paddingBottom: 20, paddingTop: 20 }}
+    >
       <View>
         <Text style={style.textLogin}>Forgot Password</Text>
         <Text style={{ color: '#104651', alignSelf: 'center' }}>
@@ -42,7 +59,10 @@ const ResetPass = () => {
           onChangeText={data => checkMail(data)}
         />
         {emailErr ? <Text style={style.errorMail}>{emailErr}</Text> : null}
-        <TouchableOpacity style={style.sendButton}>
+        <TouchableOpacity
+          style={style.sendButton}
+          onPress={() => recoverPassword()}
+        >
           <Text style={style.buttonText}>Send</Text>
         </TouchableOpacity>
         <TouchableOpacity

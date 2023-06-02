@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import CheckBox from 'react-native-check-box';
 import CustomInput from '../../components/CustomInput';
 import HidePass from '../../assets/images/hide_pwd_icon.svg';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Logo from '../../assets/images/iconMain.svg';
 import ShowPass from '../../assets/images/passShow.svg';
 import UserLogo from '../../assets/images/user.svg';
@@ -11,8 +12,10 @@ import { saveEnteredInfo } from '../../store/userInfo';
 import { style } from './style';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
+import { useSignInMutation } from '../../services/modules/users';
 
 const LoginManually = () => {
+  const [signIn, { data, error }] = useSignInMutation();
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const [emailErr, setEmailErr] = useState('');
@@ -50,17 +53,36 @@ const LoginManually = () => {
       setPassErr('');
     }
   };
-
+  console.log(error, 'error for api');
   const handleLogin = () => {
     if (emailErr.length === 0 && passErr.length === 0) {
       if (check) {
         dispatch(saveEnteredInfo({ email, pass }));
-        navigation.navigate('Home');
+        handleApi();
       } else {
-        navigation.navigate('Home');
+        handleApi();
       }
     } else {
       Alert.alert('Enter details correctly');
+    }
+  };
+
+  const handleApi = () => {
+    try {
+      signIn({ Email: email, Password: pass })
+        .then(res => {
+          console.log(res, 'showing response');
+          if (res.data.status) {
+            navigation.navigate('Home');
+          }
+        })
+        .catch(err => {
+          console.log('we got error');
+          console.log(err);
+        });
+      console.log('function ran');
+    } catch {
+      console.log('error observed');
     }
   };
 
