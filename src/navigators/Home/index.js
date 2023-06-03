@@ -1,5 +1,6 @@
 import { Text, TouchableOpacity, View } from 'react-native';
 
+import { Constants } from '../../shared/constants';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { LoginManager } from 'react-native-fbsdk-next';
 import React from 'react';
@@ -14,40 +15,35 @@ const Home = () => {
   const LogOutGoogle = async () => {
     try {
       await GoogleSignin.signOut();
-      console.log('LOGGED OUT');
       dispatch(logOut());
-      navigation.navigate('LoginScreen');
+      navigation.navigate(Constants.Screens.LOGIN);
     } catch (error) {
       console.error(error);
     }
   };
 
   const logOutFacebook = () => {
-    console.log('in logout function');
     try {
-      console.log('in try block');
       LoginManager.logOut();
       dispatch(logOut());
-      navigation.navigate('LoginScreen');
+      navigation.navigate(Constants.Screens.LOGIN);
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center' }}>
-      <TouchableOpacity
-        style={style.buttonStyle}
-        onPress={() => LogOutGoogle()}
-      >
-        <Text style={{ color: '#fff' }}>Sign Out from Google</Text>
+    <View style={style.mainView}>
+      <TouchableOpacity style={style.buttonStyle} onPress={LogOutGoogle}>
+        <Text style={style.buttonText}>
+          {Constants.HOME_SCREEN.SIGNOUT_GOOGLE}
+        </Text>
       </TouchableOpacity>
       <Text />
-      <TouchableOpacity
-        style={style.buttonStyle}
-        onPress={() => logOutFacebook()}
-      >
-        <Text style={{ color: '#fff' }}>Sign Out from Facebook</Text>
+      <TouchableOpacity style={style.buttonStyle} onPress={logOutFacebook}>
+        <Text style={style.buttonText}>
+          {Constants.HOME_SCREEN.SIGNOUT_FACEBOOK}
+        </Text>
       </TouchableOpacity>
     </View>
   );

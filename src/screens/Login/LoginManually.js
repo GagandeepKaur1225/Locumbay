@@ -2,10 +2,9 @@ import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 
 import CheckBox from 'react-native-check-box';
+import { Constants } from '../../shared/constants';
 import CustomInput from '../../components/CustomInput';
 import HidePass from '../../assets/images/hide_pwd_icon.svg';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import Logo from '../../assets/images/iconMain.svg';
 import ShowPass from '../../assets/images/passShow.svg';
 import UserLogo from '../../assets/images/user.svg';
 import { saveEnteredInfo } from '../../store/userInfo';
@@ -25,43 +24,37 @@ const LoginManually = () => {
   const [check, setCheck] = useState(false);
 
   const checkMail = data => {
-    const reg =
-      /^(([^<>()\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const reg = Constants.REGEX.EMAIL_REGEX;
     if (data.length === 0) {
       setEmail('');
       setEmailErr('');
     } else if (reg.test(data) !== true) {
-      setEmailErr('Enter valid mail');
-      console.log('err', data);
+      setEmailErr(Constants.ERRORS.EMAIL_ERROR);
     } else {
       setEmail(data);
       setEmailErr('');
-      console.log('done with mail');
     }
   };
 
   const checkPassword = data => {
-    const reg =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !"#$%&'()*+,/:;<=>?@[\]^_`{|}~÷°¬±µ‰¤ƒ¥€£¢ß¿¡©®™§†‡—¶])(?=.{8,})/;
+    const reg = Constants.REGEX.PASSWORD_REGEX;
     if (data.length === 0) {
       setPass('');
       setPassErr('');
     } else if (reg.test(data) !== true) {
-      setPassErr('Enter password in correct format');
+      setPassErr(Constants.ERRORS.PASSWORD_ERROR);
     } else {
       setPass(data);
       setPassErr('');
     }
   };
-  console.log(error, 'error for api');
+
   const handleLogin = () => {
-    if (emailErr.length === 0 && passErr.length === 0) {
+    if (!emailErr && !passErr) {
       if (check) {
         dispatch(saveEnteredInfo({ email, pass }));
-        handleApi();
-      } else {
-        handleApi();
       }
+      handleApi();
     } else {
       Alert.alert('Enter details correctly');
     }
@@ -87,13 +80,13 @@ const LoginManually = () => {
   };
 
   return (
-    <View>
+    <>
       <View>
         <CustomInput
           placeholder="Enter email"
           header="Email"
           logo={<UserLogo />}
-          onChangeText={data => checkMail(data)}
+          onChangeText={checkMail}
           onSecureTextEntry={false}
         />
         {emailErr.length !== 0 ? (
@@ -106,7 +99,7 @@ const LoginManually = () => {
           header="Password"
           logo={<ShowPass />}
           logoHidePass={<HidePass />}
-          onChangeText={data => checkPassword(data)}
+          onChangeText={checkPassword}
         />
         {passErr.length !== 0 ? (
           <Text style={style.errorMail}>{passErr}</Text>
@@ -117,24 +110,31 @@ const LoginManually = () => {
           <CheckBox
             style={{ borderColor: '#104651' }}
             onClick={() => {
-              console.log('checkbox pressed');
               setCheck(prev => !prev);
             }}
             isChecked={check}
             checkedCheckBoxColor="#6AAF56"
             uncheckedCheckBoxColor="#6AAF56"
           />
-          <Text style={{ color: '#104651', alignSelf: 'center' }}>
-            Remember me
+          <Text style={style.remembrMe}>
+            {Constants.LoginManually.REMEMBER_ME}
           </Text>
         </View>
-        <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
+        <View style={style.resetPasswordView}>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('ResetPass');
+              navigation.navigate(Constants.Screens.RESETPASSWORD);
+            }}
+            hitSlop={{
+              top: 5,
+              left: 20,
+              bottom: 8,
+              right: 20,
             }}
           >
-            <Text style={style.forgotPassText}>Forgot Password?</Text>
+            <Text style={style.forgotPassText}>
+              {Constants.LoginManually.FORGOT_PASSWORD_CHECK}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -143,9 +143,9 @@ const LoginManually = () => {
         onPress={() => handleLogin()}
         disabled={email && pass ? false : true}
       >
-        <Text style={style.loginText}>Login</Text>
+        <Text style={style.loginText}>{Constants.Login.LOGINTEXT}</Text>
       </TouchableOpacity>
-    </View>
+    </>
   );
 };
 

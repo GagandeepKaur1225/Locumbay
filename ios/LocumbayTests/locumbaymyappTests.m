@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface LocumabayTests : XCTestCase
+@interface LocumbayTests : XCTestCase
 
 @end
 
-@implementation LocumabayTests
+@implementation LocumbayTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

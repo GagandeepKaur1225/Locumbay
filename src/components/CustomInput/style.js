@@ -14,10 +14,13 @@ export const style = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#ECF5F6',
     borderColor: '#E8E8E8',
-    paddingLeft: 7,
-    paddingRight: 7,
+    paddingLeft: '4%',
+    paddingRight: '4%',
   },
   headerStyle: {
     color: '#104651',
   },
+  textInputField: { width: '88%', height: heightPercentageToDP('7%') },
+  mainView: { alignSelf: 'center', padding: '4%' },
+  image: { alignSelf: 'center', marginRight: '5%' },
 });

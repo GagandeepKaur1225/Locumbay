@@ -1,6 +1,7 @@
 import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 
+import { Constants } from '../../shared/constants';
 import CustomInput from '../../components/CustomInput';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { style } from './style';
@@ -32,44 +33,43 @@ const ResetPass = () => {
     try {
       recoverPass({ email: email })
         .then(res => {
-          console.log(res, 'response of recover pass api');
           Alert.alert(res.data.message);
         })
         .catch(err => console.log(err));
     } catch (err) {
-      console.log(err);
       Alert.alert('Something went wrong');
     }
   };
 
   return (
-    <KeyboardAwareScrollView
-      style={{ flex: 1, paddingBottom: 20, paddingTop: 20 }}
-    >
+    <KeyboardAwareScrollView style={style.mainView}>
       <View>
-        <Text style={style.textLogin}>Forgot Password</Text>
-        <Text style={{ color: '#104651', alignSelf: 'center' }}>
-          Enter the email to recover the password
+        <Text style={style.textLogin}>
+          {Constants.RECOVERPASSWORD.FORGOT_PASSWORD}
         </Text>
+        <Text style={style.mail}>{Constants.RECOVERPASSWORD.ENTER_MAIL}</Text>
       </View>
       <View>
         <CustomInput
           placeholder="Enter here..."
           header="Email"
-          onChangeText={data => checkMail(data)}
+          onChangeText={checkMail}
         />
         {emailErr ? <Text style={style.errorMail}>{emailErr}</Text> : null}
-        <TouchableOpacity
-          style={style.sendButton}
-          onPress={() => recoverPassword()}
-        >
-          <Text style={style.buttonText}>Send</Text>
+        <TouchableOpacity style={style.sendButton} onPress={recoverPassword}>
+          <Text style={style.buttonText}>{Constants.RECOVERPASSWORD.SEND}</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{ alignSelf: 'center' }}
-          onPress={() => navigation.navigate('LoginScreen')}
+          onPress={() => navigation.navigate(Constants.Screens.LOGIN)}
+          hitSlop={{
+            top: 5,
+            left: 20,
+            bottom: 10,
+            right: 20,
+          }}
         >
-          <Text style={style.loginButton}>Login</Text>
+          <Text style={style.loginButton}>{Constants.Login.LOGINTEXT}</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAwareScrollView>

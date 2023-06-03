@@ -7,13 +7,14 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
+  mainView: { flex: 1, paddingBottom: '10%', paddingTop: '20%' },
   textLogin: {
-    fontWeight: '600',
+    fontWeight: '700',
     alignSelf: 'center',
-    fontSize: RFValue(22),
+    fontSize: RFValue(26),
     marginTop: '10%',
     color: '#104651',
-    padding: 25,
+    padding: '5%',
   },
   sendButton: {
     height: heightPercentageToDP('8%'),
@@ -43,4 +44,5 @@ export const style = StyleSheet.create({
     textDecorationLine: 'underline',
     fontWeight: '600',
   },
+  mail: { color: '#104651', alignSelf: 'center', fontWeight: '500' },
 });

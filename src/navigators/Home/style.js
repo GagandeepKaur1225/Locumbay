@@ -1,4 +1,7 @@
-import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from 'react-native-responsive-screen';
 
 import { StyleSheet } from 'react-native';
 
@@ -13,4 +16,6 @@ export const style = StyleSheet.create({
     marginTop: '5%',
     backgroundColor: '#6AAF56',
   },
+  mainView: { flex: 1, justifyContent: 'center' },
+  buttonText: { color: '#fff' },
 });

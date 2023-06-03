@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
 import { TextInput } from 'react-native-gesture-handler';
-import UserLogo from '../../assets/images/user.svg';
-import { heightPercentageToDP } from 'react-native-responsive-screen';
 import { style } from './style';
 
 const CustomInput = ({ ...props }) => {
   const [focused, setFocused] = useState();
   const [ShowPass, setShowPass] = useState();
   return (
-    <View style={{ alignSelf: 'center', padding: 8 }}>
+    <View style={style.mainView}>
       <Text style={style.headerStyle}>{props?.header}</Text>
       <Text />
       <View
@@ -24,18 +22,17 @@ const CustomInput = ({ ...props }) => {
           placeholder={props.placeholder}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          style={{ width: '88%', height: heightPercentageToDP('7%') }}
+          style={style.textInputField}
           onChangeText={props.onChangeText}
           secureTextEntry={
             props.header === 'Email' ? false : ShowPass ? false : true
           }
         />
-        <View style={{ alignSelf: 'center', marginRight: 15 }}>
+        <View style={style.image}>
           <TouchableOpacity
             disabled={props?.header === 'Email' ? true : false}
             onPress={() => {
               setShowPass(prev => !prev);
-              console.log(ShowPass, 'state for password');
             }}
             hitSlop={{
               top: 5,

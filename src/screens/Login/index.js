@@ -1,21 +1,21 @@
-import { AccessToken, LoginManager, Settings } from 'react-native-fbsdk-next';
 import {
   GoogleSignin,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
-import React, { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { addFacebookToken, saveUser } from '../../store/userInfo';
 
+import { AccessToken } from 'react-native-fbsdk-next';
+import { Constants } from '../../shared/constants';
 import CustomButton from '../../components/CustomButton';
 import FacebookLogo from '../../assets/images/facebookLogo.svg';
-import { FontSize } from '../../theme/Variables';
 import GoogleLogo from '../../assets/images/googleLogo.svg';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LoginManually from './LoginManually';
 import Logo from '../../assets/images/iconMain.svg';
 import { RFValue } from 'react-native-responsive-fontsize';
-// import auth from '@react-native-firebase/auth';
+import React from 'react';
+import { facebookLoginPermissions } from '../../utilities/functions';
 import { style } from './style';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
@@ -23,18 +23,13 @@ import { useNavigation } from '@react-navigation/native';
 const LoginScreen = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
-  useEffect(() => {
-    GoogleSignin.configure();
-    Settings.initializeSDK();
-  }, []);
   const signIn = async () => {
     try {
-      console.log('in try of google sign in');
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log(userInfo, 'user info required is');
       dispatch(saveUser(userInfo));
-      navigation.navigate('Home');
+      navigation.navigate(Constants.Screens.HOME);
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -56,23 +51,17 @@ const LoginScreen = () => {
 
   const facebookLogin = async () => {
     try {
-      const result = await LoginManager.logInWithPermissions([
-        'public_profile',
-        'email',
-      ]);
-      if (result.isCancelled) {
-        console.log('Login cancelled', result);
-      } else {
+      const result = await facebookLoginPermissions();
+      if (!result.isCancelled) {
         const data = await AccessToken.getCurrentAccessToken();
         if (data) {
-          console.log('Login successful', data.accessToken);
           const response = await fetch(
             `https://graph.facebook.com/v13.0/me?access_token=${data.accessToken}`,
           );
           const userData = await response.json();
           console.log('Facebook user data:', userData);
           dispatch(addFacebookToken(userData));
-          navigation.navigate('Home');
+          navigation.navigate(Constants.Screens.HOME);
         }
       }
     } catch (error) {
@@ -82,39 +71,37 @@ const LoginScreen = () => {
 
   return (
     <KeyboardAwareScrollView
-      style={{ flex: 1, padding:5 }}
+      style={style.mainView}
       showsVerticalScrollIndicator={false}
     >
       <View style={style.logo}>
         <Logo />
       </View>
       <View>
-        <Text style={style.textLogin}>Login</Text>
+        <Text style={style.textLogin}>{Constants.Login.LOGINTEXT}</Text>
       </View>
       <LoginManually />
       <View>
-        <Text
-          style={{ alignSelf: 'center', padding: 10, fontSize: RFValue(24) }}
-        >
-          Or
-        </Text>
+        <Text style={style.OR}>{Constants.Login.OR}</Text>
       </View>
       <View style={style.socialButtons}>
         <CustomButton
           title="Google"
-          onClick={() => signIn()}
+          onClick={signIn}
           logoSocial={<GoogleLogo />}
         />
         <CustomButton
           title="Facebook"
           logoSocial={<FacebookLogo />}
-          onClick={() => facebookLogin()}
+          onClick={facebookLogin}
         />
       </View>
       <View style={style.Register}>
-        <Text style={{ fontSize: RFValue(18) }}>Don't have an account? </Text>
+        <Text style={{ fontSize: RFValue(18) }}>
+          {Constants.Login.DONT_HAVE_ACCOUNT}
+        </Text>
         <TouchableOpacity>
-          <Text style={style.registerText}> Register Now</Text>
+          <Text style={style.registerText}>{Constants.Login.REGISTER}</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAwareScrollView>

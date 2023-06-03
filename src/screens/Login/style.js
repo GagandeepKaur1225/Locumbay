@@ -7,11 +7,12 @@ import {
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const style = StyleSheet.create({
+  mainView: { flex: 1, padding: '2%' },
   textLogin: {
     fontWeight: '700',
     alignSelf: 'center',
     fontSize: RFValue(22),
-    marginTop: '10%',
+    marginTop: heightPercentageToDP('4%'),
     color: '#104651',
   },
   logo: { alignSelf: 'center', top: '2%' },
@@ -20,6 +21,7 @@ export const style = StyleSheet.create({
     width: widthPercentageToDP('90%'),
     alignSelf: 'center',
     justifyContent: 'space-between',
+    marginTop: '2%',
   },
   rememberMe: {
     flexDirection: 'row',
@@ -38,14 +40,14 @@ export const style = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 8,
     alignItems: 'center',
-    marginTop: '5%',
+    marginTop: heightPercentageToDP('2%'),
     backgroundColor: '#6AAF56',
   },
   loginText: {
     color: '#FFFFFF',
     fontWeight: '600',
     fontSize: RFValue(22),
-    padding: 5,
+    padding: '1%',
   },
   socialButtons: {
     flexDirection: 'row',
@@ -57,17 +59,20 @@ export const style = StyleSheet.create({
     color: '#104651',
     fontWeight: '700',
     textDecorationLine: 'underline',
-    fontSize:RFValue(18)
+    fontSize: RFValue(18),
   },
   errorMail: {
-    width: widthPercentageToDP('88%'),
+    width: widthPercentageToDP('90%'),
     alignSelf: 'center',
     color: 'red',
   },
   Register: {
     flexDirection: 'row',
     alignSelf: 'center',
-    marginTop: '5%',
+    marginTop: '3%',
     marginBottom: '4%',
   },
+  OR: { alignSelf: 'center', padding: '4%', fontSize: RFValue(20) },
+  remembrMe: { color: '#104651', alignSelf: 'center' },
+  resetPasswordView: { flexDirection: 'row', alignSelf: 'center' },
 });
