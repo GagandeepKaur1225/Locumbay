@@ -3,6 +3,7 @@ import {
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 
+import { Constants } from '../../shared/constants';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { StyleSheet } from 'react-native';
 
@@ -11,7 +12,7 @@ export const style = StyleSheet.create({
   textLogin: {
     fontWeight: '700',
     alignSelf: 'center',
-    fontSize: RFValue(26),
+    fontSize: RFValue(Constants.HEADINGS.MAIN),
     marginTop: '10%',
     color: '#104651',
     padding: '5%',
@@ -45,4 +46,7 @@ export const style = StyleSheet.create({
     fontWeight: '600',
   },
   mail: { color: '#104651', alignSelf: 'center', fontWeight: '500' },
+  alignCenter: {
+    alignSelf:'center'
+  }
 });

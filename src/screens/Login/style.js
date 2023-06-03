@@ -4,6 +4,7 @@ import {
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 
+import { Constants } from '../../shared/constants';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const style = StyleSheet.create({
@@ -11,7 +12,7 @@ export const style = StyleSheet.create({
   textLogin: {
     fontWeight: '700',
     alignSelf: 'center',
-    fontSize: RFValue(22),
+    fontSize: RFValue(Constants.HEADINGS.MAIN),
     marginTop: heightPercentageToDP('4%'),
     color: '#104651',
   },

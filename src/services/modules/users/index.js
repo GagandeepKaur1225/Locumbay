@@ -6,7 +6,6 @@ export const userApi = api.injectEndpoints({
         const formData = new FormData();
         formData.append('email', Email);
         formData.append('password', Password);
-        console.log(formData, 'formdata is');
         return {
           url: 'auth/login/',
           method: 'POST',
@@ -17,9 +16,7 @@ export const userApi = api.injectEndpoints({
     recoverPassword: build.mutation({
       query: ({ email }) => {
         const formData = new FormData();
-        console.log(email);
         formData.append('email', email);
-        console.log(formData, 'formdata is');
         return {
           url: 'auth/forgotpassword/',
           method: 'POST',

@@ -34,4 +34,9 @@ export const Constants = {
     PASSWORD_REGEX:
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !"#$%&'()*+,/:;<=>?@[\]^_`{|}~÷°¬±µ‰¤ƒ¥€£¢ß¿¡©®™§†‡—¶])(?=.{8,})/,
   },
+  HEADINGS: {
+    MAIN: 24,
+    SUB_HEADING: 22,
+    INPUT_FIELD_HEADING: 15,
+  },
 };

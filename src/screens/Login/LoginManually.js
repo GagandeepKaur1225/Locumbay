@@ -1,28 +1,35 @@
-import { Alert, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, FlatList, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
+import { rememberUser, saveEnteredInfo } from '../../store/userInfo';
+import { useDispatch, useSelector } from 'react-redux';
 
 import CheckBox from 'react-native-check-box';
 import { Constants } from '../../shared/constants';
 import CustomInput from '../../components/CustomInput';
 import HidePass from '../../assets/images/hide_pwd_icon.svg';
 import ShowPass from '../../assets/images/passShow.svg';
+import Tooltip from 'react-native-walkthrough-tooltip';
 import UserLogo from '../../assets/images/user.svg';
-import { saveEnteredInfo } from '../../store/userInfo';
 import { style } from './style';
-import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import { useSignInMutation } from '../../services/modules/users';
 
 const LoginManually = () => {
-  const [signIn, { data, error }] = useSignInMutation();
+  const [signIn] = useSignInMutation();
   const dispatch = useDispatch();
+  const [toolTip, setToolTip] = useState(false);
   const navigation = useNavigation();
   const [emailErr, setEmailErr] = useState('');
   const [passErr, setPassErr] = useState('');
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [check, setCheck] = useState(false);
-
+  const rememberedUsersData = useSelector(
+    data => data.userInfo.rememberedUsers,
+  );
+  console.log(rememberedUsersData);
+  const keysRemembered = Object.keys(rememberedUsersData);
+  console.log(keysRemembered);
   const checkMail = data => {
     const reg = Constants.REGEX.EMAIL_REGEX;
     if (data.length === 0) {
@@ -52,7 +59,7 @@ const LoginManually = () => {
   const handleLogin = () => {
     if (!emailErr && !passErr) {
       if (check) {
-        dispatch(saveEnteredInfo({ email, pass }));
+        dispatch(rememberUser({ email, pass }));
       }
       handleApi();
     } else {
@@ -64,16 +71,17 @@ const LoginManually = () => {
     try {
       signIn({ Email: email, Password: pass })
         .then(res => {
-          console.log(res, 'showing response');
           if (res.data.status) {
-            navigation.navigate('Home');
+            console.log('in if');
+            dispatch(saveEnteredInfo({ email, pass }));
+            navigation.navigate(Constants.Screens.HOME);
+          } else {
+            Alert.alert(res.error.data.message);
           }
         })
         .catch(err => {
-          console.log('we got error');
           console.log(err);
         });
-      console.log('function ran');
     } catch {
       console.log('error observed');
     }

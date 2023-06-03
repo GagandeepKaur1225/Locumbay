@@ -3,6 +3,8 @@ import {
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 
+import { Constants } from '../../shared/constants';
+import { RFValue } from 'react-native-responsive-fontsize';
 import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
@@ -14,11 +16,12 @@ export const style = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#ECF5F6',
     borderColor: '#E8E8E8',
-    paddingLeft: '4%',
-    paddingRight: '4%',
+    paddingLeft: '1.5%',
+    paddingRight: '3%',
   },
   headerStyle: {
     color: '#104651',
+    fontSize: RFValue(Constants.HEADINGS.INPUT_FIELD_HEADING),
   },
   textInputField: { width: '88%', height: heightPercentageToDP('7%') },
   mainView: { alignSelf: 'center', padding: '4%' },

@@ -61,7 +61,6 @@ const ApplicationNavigator = () => {
   const navigationRef = useNavigationContainerRef();
   useFlipper(navigationRef);
   const data = useSelector(data => data.userInfo);
-  console.log(data, 'data in the application.js');
   return (
     <SafeAreaView style={[Layout.fill, { backgroundColor: '#fff' }]}>
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>

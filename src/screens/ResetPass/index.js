@@ -13,19 +13,17 @@ const ResetPass = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState();
   const [emailErr, setEmailErr] = useState('');
+
   const checkMail = data => {
-    const reg =
-      /^(([^<>()\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const reg = Constants.ERRORS.EMAIL_ERROR;
     if (data.length === 0) {
       setEmail('');
       setEmailErr('');
     } else if (reg.test(data) !== true) {
       setEmailErr('Enter valid mail');
-      console.log('err', data);
     } else {
       setEmail(data);
       setEmailErr('');
-      console.log('done with mail');
     }
   };
 
@@ -60,7 +58,7 @@ const ResetPass = () => {
           <Text style={style.buttonText}>{Constants.RECOVERPASSWORD.SEND}</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{ alignSelf: 'center' }}
+          style={style.alignCenter}
           onPress={() => navigation.navigate(Constants.Screens.LOGIN)}
           hitSlop={{
             top: 5,
