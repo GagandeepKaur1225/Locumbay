@@ -1,4 +1,3 @@
-import { Platform, StyleSheet } from 'react-native';
 import {
   heightPercentageToDP,
   widthPercentageToDP,
@@ -6,6 +5,7 @@ import {
 
 import { Constants } from '../../shared/constants';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
   mainView: { flex: 1, padding: '2%' },
@@ -14,7 +14,7 @@ export const style = StyleSheet.create({
     alignSelf: 'center',
     fontSize: RFValue(Constants.HEADINGS.MAIN),
     marginTop: heightPercentageToDP('4%'),
-    color: '#104651',
+    color: Constants.COLORS.primary,
   },
   logo: { alignSelf: 'center', top: '2%' },
   forgotPass: {
@@ -27,11 +27,10 @@ export const style = StyleSheet.create({
   rememberMe: {
     flexDirection: 'row',
     width: '40%',
-    // justifyContent: 'space-between',
   },
   forgotPassText: {
     fontWeight: '600',
-    color: '#104651',
+    color: Constants.COLORS.primary,
     alignSelf: 'center',
   },
   loginButton: {
@@ -42,10 +41,10 @@ export const style = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     marginTop: heightPercentageToDP('2%'),
-    backgroundColor: '#6AAF56',
+    backgroundColor: Constants.COLORS.buttonColor,
   },
   loginText: {
-    color: '#FFFFFF',
+    color: Constants.COLORS.white,
     fontWeight: '600',
     fontSize: RFValue(22),
     padding: '1%',
@@ -57,7 +56,7 @@ export const style = StyleSheet.create({
     justifyContent: 'space-between',
   },
   registerText: {
-    color: '#104651',
+    color: Constants.COLORS.primary,
     fontWeight: '700',
     textDecorationLine: 'underline',
     fontSize: RFValue(18),
@@ -74,6 +73,6 @@ export const style = StyleSheet.create({
     marginBottom: '4%',
   },
   OR: { alignSelf: 'center', padding: '4%', fontSize: RFValue(20) },
-  remembrMe: { color: '#104651', alignSelf: 'center' },
+  remembrMe: { color: Constants.COLORS.primary, alignSelf: 'center' },
   resetPasswordView: { flexDirection: 'row', alignSelf: 'center' },
 });

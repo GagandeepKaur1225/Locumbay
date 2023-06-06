@@ -39,4 +39,9 @@ export const Constants = {
     SUB_HEADING: 22,
     INPUT_FIELD_HEADING: 15,
   },
+  COLORS: {
+    primary: '#104651',
+    buttonColor: '#6AAF56',
+    white: '#fff',
+  },
 };

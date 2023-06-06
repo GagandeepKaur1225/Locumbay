@@ -2,7 +2,7 @@ import {
   GoogleSignIn,
   facebookLoginPermissions,
   fetchFromFacebook,
-} from '../../utilities/functions';
+} from '../../utilities/socialLogins';
 import {
   GoogleSignin,
   statusCodes,

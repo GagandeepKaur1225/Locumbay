@@ -14,7 +14,7 @@ export const style = StyleSheet.create({
     alignSelf: 'center',
     fontSize: RFValue(Constants.HEADINGS.MAIN),
     marginTop: '10%',
-    color: '#104651',
+    color: Constants.COLORS.primary,
     padding: '5%',
   },
   sendButton: {
@@ -25,10 +25,10 @@ export const style = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     marginTop: '5%',
-    backgroundColor: '#6AAF56',
+    backgroundColor: Constants.COLORS.buttonColor,
   },
   buttonText: {
-    color: '#FFFFFF',
+    color: Constants.COLORS.white,
     fontWeight: '600',
     fontSize: RFValue(22),
     padding: 5,
@@ -39,14 +39,18 @@ export const style = StyleSheet.create({
     color: 'red',
   },
   loginButton: {
-    color: '#104651',
+    color: Constants.COLORS.primary,
     fontSize: RFValue(22),
     marginTop: heightPercentageToDP('5%'),
     textDecorationLine: 'underline',
     fontWeight: '600',
   },
-  mail: { color: '#104651', alignSelf: 'center', fontWeight: '500' },
+  mail: {
+    color: Constants.COLORS.primary,
+    alignSelf: 'center',
+    fontWeight: '500',
+  },
   alignCenter: {
-    alignSelf:'center'
-  }
+    alignSelf: 'center',
+  },
 });

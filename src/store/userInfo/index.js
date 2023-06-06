@@ -29,13 +29,10 @@ const slice = createSlice({
       initialState.userName = payload.payload.name;
     },
     rememberUser: (initialState, payload) => {
-      console.log(initialState.rememberedUsers, 'data in intialState');
       const keys = Object.keys(initialState.rememberedUsers);
       if (!keys.includes(payload.payload.email)) {
         initialState.rememberedUsers[payload.payload.email] = payload.payload;
-        console.log('writing values');
       }
-      console.log(initialState.rememberedUsers);
     },
   },
 });
