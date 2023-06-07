@@ -1,10 +1,8 @@
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 
-import { Constants } from '../../shared/constants';
 import React from 'react';
 import { style } from './style';
 import { useSelector } from 'react-redux';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 const CustomTooltip = ({ ...props }) => {
   const rememberedUsersData = useSelector(
@@ -37,7 +35,7 @@ const CustomTooltip = ({ ...props }) => {
       <View>
         <FlatList
           style={style.listView}
-          data={keysRemembered}
+          data={props?.data}
           keyExtractor={(_, index) => {
             index.toString();
           }}

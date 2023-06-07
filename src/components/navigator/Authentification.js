@@ -1,5 +1,6 @@
 import { Constants } from '../../shared/constants';
 import Home from '../../navigators/Home';
+import LoginScreen from '../../screens/Login';
 import ResetPass from '../../screens/ResetPass';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -15,6 +16,7 @@ export const Authentification = () => {
         name={Constants.Screens.RESETPASSWORD}
         component={ResetPass}
       />
+      <Stack.Screen name={Constants.Screens.LOGIN} component={LoginScreen} />
     </Stack.Navigator>
   );
 };

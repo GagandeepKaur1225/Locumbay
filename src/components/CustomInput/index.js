@@ -8,12 +8,10 @@ import { useSelector } from 'react-redux';
 const CustomInput = ({ ...props }) => {
   const [focused, setFocused] = useState();
   const [ShowPass, setShowPass] = useState();
-  const rememberedUsersData = useSelector(
-    data => data.userInfo.rememberedUsers,
-  );
-  console.log(rememberedUsersData);
-  const keysRemembered = Object.keys(rememberedUsersData);
-  console.log(keysRemembered);
+  const rememberedUsersData = useSelector(data => data.userInfo);
+  // console.log(rememberedUsersData);
+  // const keysRemembered = Object.keys(rememberedUsersData);
+  // console.log(keysRemembered);
   return (
     <View style={style.mainView}>
       <Text style={style.headerStyle}>{props?.header}</Text>
@@ -30,20 +28,14 @@ const CustomInput = ({ ...props }) => {
           value={props?.value}
           onFocus={() => {
             setFocused(true);
-            if (props.header === 'Email') {
-              if (keysRemembered.length !== 0) {
-                props?.openHint();
-                // props?.handlePress();
-              }
-            }
+            // if (props.header === 'Email') {
+            //   if (keysRemembered.length !== 0) {
+            //     props?.openHint();
+            //   }
+            // }
           }}
           onBlur={() => {
             setFocused(false);
-            console.log(props.props, 'props are');
-            // props?.handlePress();
-            if (props.header === 'Email') {
-              // props?.handlePress();
-            }
           }}
           style={style.textInputField}
           onChangeText={props.onChangeText}

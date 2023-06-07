@@ -20,37 +20,6 @@ import { useTheme } from '../hooks';
 
 const Stack = createStackNavigator();
 // @refresh reset
-//after login screens
-// const Authentification = () => {
-//   return (
-//     <Stack.Navigator
-//       screenOptions={{ headerShown: false }}
-//       initialRouteName="Home"
-//     >
-//       <Stack.Screen name={Constants.Screens.HOME} component={Home} />
-//       <Stack.Screen
-//         name={Constants.Screens.RESETPASSWORD}
-//         component={ResetPass}
-//       />
-//     </Stack.Navigator>
-//   );
-// };
-//to login screen
-// const Guest = () => {
-//   return (
-//     <Stack.Navigator
-//       screenOptions={{ headerShown: false }}
-//       initialRouteName="LoginScreen"
-//     >
-//       <Stack.Screen name={Constants.Screens.LOGIN} component={LoginScreen} />
-//       <Stack.Screen name={Constants.Screens.HOME} component={Home} />
-//       <Stack.Screen
-//         name={Constants.Screens.RESETPASSWORD}
-//         component={ResetPass}
-//       />
-//     </Stack.Navigator>
-//   );
-// };
 const ApplicationNavigator = () => {
   useEffect(() => {
     GoogleSignin.configure();

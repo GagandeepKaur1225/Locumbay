@@ -6,7 +6,6 @@ const slice = createSlice({
     email: '',
     userName: '',
     password: '',
-    rememberedUsers: {},
   },
   reducers: {
     saveUser: (initialState, payload) => {
@@ -17,6 +16,8 @@ const slice = createSlice({
     saveEnteredInfo: (initialState, payload) => {
       initialState.email = payload.payload.email;
       initialState.password = payload.payload.pass;
+      initialState.userName = payload.payload.userName;
+      initialState.idUser = payload.payload.userId;
     },
     logOut: (initialState, payload) => {
       initialState.idUser = '';
@@ -25,22 +26,12 @@ const slice = createSlice({
       initialState.password = '';
     },
     addFacebookToken: (initialState, payload) => {
+      console.log(payload.payload, 'payload for facebook is');
       initialState.idUser = payload.payload.id;
       initialState.userName = payload.payload.name;
     },
-    rememberUser: (initialState, payload) => {
-      const keys = Object.keys(initialState.rememberedUsers);
-      if (!keys.includes(payload.payload.email)) {
-        initialState.rememberedUsers[payload.payload.email] = payload.payload;
-      }
-    },
   },
 });
-export const {
-  saveUser,
-  logOut,
-  addFacebookToken,
-  saveEnteredInfo,
-  rememberUser,
-} = slice.actions;
+export const { saveUser, logOut, addFacebookToken, saveEnteredInfo } =
+  slice.actions;
 export default slice.reducer;

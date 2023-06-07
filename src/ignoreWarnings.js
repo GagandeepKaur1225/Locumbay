@@ -9,6 +9,7 @@ if (__DEV__) {
     'AsyncStorage has been extracted from react-native',
     'Non-serializable values were found in the navigation state.',
     'VirtualizedLists should never be nested inside plain ScrollViews',
+    'Each child in a list should have a unique "key" prop',
   ];
 
   const warn = console.warn;

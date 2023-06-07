@@ -25,7 +25,7 @@ export function GoogleSignIn() {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       dispatch(saveUser(userInfo));
-      navigation.navigate(Constants.Screens.HOME);
+      navigation.navigate(Constants.Screens.HOME, { method: 'google' });
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow

@@ -13,12 +13,16 @@ const CustomButton = ({ ...props }) => {
   return (
     <>
       <TouchableOpacity
-        style={style.socialButton}
+        style={props?.style ? props.style : style.socialButton}
         onPress={() => props?.onClick()}
       >
         <View>{props?.logoSocial}</View>
         <Text
-          style={{ color: '#104651', fontWeight: '600', fontSize: RFValue(22) }}
+          style={{
+            color: props?.style ? '#fff' : '#104651',
+            fontWeight: '600',
+            fontSize: RFValue(22),
+          }}
         >
           {props.title}
         </Text>

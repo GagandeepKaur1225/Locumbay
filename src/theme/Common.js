@@ -10,7 +10,7 @@ export default function ({ Colors, ...args }) {
         button: buttonStyles({ Colors, ...args }),
         ...StyleSheet.create({
             backgroundPrimary: {
-                backgroundColor: Colors.primary,
+                backgroundColor: Colors,
             },
             backgroundReset: {
                 backgroundColor: Colors.transparent,

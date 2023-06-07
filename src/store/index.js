@@ -12,6 +12,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { MMKV } from 'react-native-mmkv';
 import { api } from '../services/api';
+import remembereduserInfo from './rememberedUsers';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import theme from './theme';
 import userInfo from './userInfo';
@@ -20,6 +21,7 @@ const reducers = combineReducers({
   theme,
   userInfo,
   [api.reducerPath]: api.reducer,
+  remembereduserInfo,
 });
 const storage = new MMKV();
 export const reduxStorage = {
@@ -39,7 +41,7 @@ export const reduxStorage = {
 const persistConfig = {
   key: 'root',
   storage: reduxStorage,
-  whitelist: ['theme', 'auth', 'userInfo'],
+  whitelist: ['userInfo', 'remembereduserInfo'],
 };
 const persistedReducer = persistReducer(persistConfig, reducers);
 const store = configureStore({

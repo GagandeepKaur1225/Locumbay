@@ -22,15 +22,18 @@ export const Constants = {
   HOME_SCREEN: {
     SIGNOUT_GOOGLE: 'Sign Out from Google',
     SIGNOUT_FACEBOOK: 'Sign Out from Facebook',
+    SIGNOUT_MANUAL: 'Sign OUT',
   },
   ERRORS: {
     EMAIL_ERROR: 'Enter valid mail',
     PASSWORD_ERROR:
       'Your password must be at least 8 characters long and include at least one capital letter, one small letter, one special character, and one number.',
+    ENTER_PASSWORD: 'Password should not be empty',
+    ENTER_MAIL: 'Email should not be empty',
   },
   REGEX: {
     EMAIL_REGEX:
-      /^(([^<>()\\.,;:s@"]+(.[^<>()\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/,
+      /^(([^<>()\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     PASSWORD_REGEX:
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !"#$%&'()*+,/:;<=>?@[\]^_`{|}~÷°¬±µ‰¤ƒ¥€£¢ß¿¡©®™§†‡—¶])(?=.{8,})/,
   },
@@ -40,8 +43,10 @@ export const Constants = {
     INPUT_FIELD_HEADING: 15,
   },
   COLORS: {
-    primary: '#104651',
-    buttonColor: '#6AAF56',
+    primary: '#6AAF56',
+    // buttonColor: ,
     white: '#fff',
+    textColorMain: '#104651',
+    lightBlue: '#ECF5F6',
   },
 };

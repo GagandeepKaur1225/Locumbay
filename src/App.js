@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import './translations';
+import './ignoreWarnings';
 
 import { persistor, store } from './store';
 
