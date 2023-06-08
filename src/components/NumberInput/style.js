@@ -14,7 +14,7 @@ export const style = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 4,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     backgroundColor: Constants.COLORS.lightBlue,
     borderColor: '#E8E8E8',
     paddingLeft: '1.5%',
@@ -26,15 +26,15 @@ export const style = StyleSheet.create({
     fontSize: RFValue(Constants.HEADINGS.INPUT_FIELD_HEADING),
   },
   textInputField: {
-    width: '88%',
+    width: '85%',
     height: heightPercentageToDP('7%'),
-    color: Constants.COLORS.textColorMain,
+    left: widthPercentageToDP('2%'),
   },
   mainView: { alignSelf: 'center', paddingTop: heightPercentageToDP('5%') },
-  image: { alignSelf: 'center', marginRight: '5%' },
-  imageNumber: {
+  image: {
     alignSelf: 'center',
-    marginRight: widthPercentageToDP('40%'),
-    borderWidth: 2,
+    marginRight: widthPercentageToDP('55%'),
+    borderRadius: 2,
+    flexDirection: 'row',
   },
 });

@@ -8,12 +8,12 @@ export const Guest = () => {
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName={Constants.Screens.LOGIN}
+      initialRouteName={Constants.SCREENS.LOGIN}
     >
-      <Stack.Screen name={Constants.Screens.LOGIN} component={LoginScreen} />
-      <Stack.Screen name={Constants.Screens.HOME} component={Home} />
+      <Stack.Screen name={Constants.SCREENS.LOGIN} component={LoginScreen} />
+      <Stack.Screen name={Constants.SCREENS.HOME} component={Home} />
       <Stack.Screen
-        name={Constants.Screens.RESETPASSWORD}
+        name={Constants.SCREENS.RESETPASSWORD}
         component={ResetPass}
       />
     </Stack.Navigator>

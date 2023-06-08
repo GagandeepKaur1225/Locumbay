@@ -112,7 +112,7 @@ const LoginManually = () => {
             setDataModal('done');
             setModalVisible(true);
             setIndicator(false);
-            navigation.navigate(Constants.Screens.HOME, { method: 'manual' });
+            navigation.navigate(Constants.SCREENS.HOME, { method: 'manual' });
           } else {
             setDataModal(res?.error?.data?.message);
             setModalVisible(true);
@@ -192,7 +192,6 @@ const LoginManually = () => {
           </View>
           <View style={style.forgotPass}>
             <View style={style.rememberMe}>
-              {/* {email && pass && !emailErr && !passErr ? ( */}
               <View style={{ flexDirection: 'row' }}>
                 <CheckBox
                   style={{
@@ -230,7 +229,7 @@ const LoginManually = () => {
             <View style={style.resetPasswordView}>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate(Constants.Screens.RESETPASSWORD);
+                  navigation.navigate(Constants.SCREENS.RESETPASSWORD);
                 }}
                 hitSlop={{
                   top: 5,

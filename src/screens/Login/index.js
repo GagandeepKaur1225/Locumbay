@@ -38,7 +38,7 @@ const LoginScreen = () => {
           console.log(userData, 'userData from facebook is:');
           dispatch(addFacebookToken(userData));
           setIndicator(false);
-          navigation.navigate(Constants.Screens.HOME, { method: 'facebook' });
+          navigation.navigate(Constants.SCREENS.HOME, { method: 'facebook' });
         }
       } else {
         setIndicator(false);
@@ -54,7 +54,7 @@ const LoginScreen = () => {
       showsVerticalScrollIndicator={false}
     >
       {indicator ? (
-        <View style={{ zIndex: 99999, position: 'absolute', height: '100%' ,alignSelf:'center',justifyContent:'center',alignItems:'center'}}>
+        <View style={style.indicatorView}>
           <Text>{console.log(indicator)}</Text>
           <ActivityIndicator size="large" animating={true} />
         </View>

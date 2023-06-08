@@ -1,12 +1,16 @@
 import { Text, TouchableOpacity, View } from 'react-native';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from 'react-native-responsive-screen';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Constants } from '../../shared/constants';
+import CustomButton from '../../components/CustomButton';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { LoginManager } from 'react-native-fbsdk-next';
 import { RFValue } from 'react-native-responsive-fontsize';
 import React from 'react';
-import { heightPercentageToDP } from 'react-native-responsive-screen';
 import { logOut } from '../../store/userInfo';
 import { style } from './style';
 import { useNavigation } from '@react-navigation/native';
@@ -24,7 +28,7 @@ const Home = ({ route }) => {
     try {
       await GoogleSignin.signOut();
       dispatch(logOut());
-      navigation.navigate(Constants.Screens.LOGIN);
+      navigation.navigate(Constants.SCREENS.LOGIN);
     } catch (error) {
       console.error(error);
     }
@@ -34,7 +38,7 @@ const Home = ({ route }) => {
     try {
       LoginManager.logOut();
       dispatch(logOut());
-      navigation.navigate(Constants.Screens.LOGIN);
+      navigation.navigate(Constants.SCREENS.LOGIN);
     } catch (err) {
       console.log(err);
     }
@@ -42,7 +46,7 @@ const Home = ({ route }) => {
 
   const logOutManual = () => {
     dispatch(logOut());
-    navigation.navigate(Constants.Screens.LOGIN);
+    navigation.navigate(Constants.SCREENS.LOGIN);
   };
   return (
     <View style={style.mainView}>
@@ -70,24 +74,15 @@ const Home = ({ route }) => {
               {Constants.HOME_SCREEN.SIGNOUT_MANUAL}
             </Text>
           )}
-          {/* {<Text>Constants.HOME_SCREEN.SIGNOUT_GOOGLE</Text>} */}
         </Text>
       </TouchableOpacity>
       <Text />
-      {/* <TouchableOpacity style={style.buttonStyle} onPress={logOutFacebook}>
-        <Text style={style.buttonText}>
-          {Constants.HOME_SCREEN.SIGNOUT_FACEBOOK}
-        </Text>
-      </TouchableOpacity> */}
-      <Text
-        style={{
-          alignSelf: 'center',
-          fontSize: RFValue(25),
-          top: heightPercentageToDP('30%'),
-        }}
-      >
-        WELCOME!!
-      </Text>
+      <Text style={style.welcomeText}>WELCOME!!</Text>
+      <CustomButton
+        title="Manage Profile"
+        style={style.manageProfileButton}
+        onClick={() => navigation.navigate(Constants.SCREENS.MANAGE_PROFILE)}
+      />
     </View>
   );
 };

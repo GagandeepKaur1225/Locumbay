@@ -59,7 +59,7 @@ const ResetPass = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={style.alignCenter}
-          onPress={() => navigation.navigate(Constants.Screens.LOGIN)}
+          onPress={() => navigation.navigate(Constants.SCREENS.LOGIN)}
           hitSlop={{
             top: 5,
             left: 20,

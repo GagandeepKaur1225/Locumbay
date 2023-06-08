@@ -1,17 +1,13 @@
-import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
 
+import { Constants } from '../../shared/constants';
 import { TextInput } from 'react-native-gesture-handler';
 import { style } from './style';
-import { useSelector } from 'react-redux';
 
 const CustomInput = ({ ...props }) => {
   const [focused, setFocused] = useState();
   const [ShowPass, setShowPass] = useState();
-  const rememberedUsersData = useSelector(data => data.userInfo);
-  // console.log(rememberedUsersData);
-  // const keysRemembered = Object.keys(rememberedUsersData);
-  // console.log(keysRemembered);
   return (
     <View style={style.mainView}>
       <Text style={style.headerStyle}>{props?.header}</Text>
@@ -19,7 +15,13 @@ const CustomInput = ({ ...props }) => {
       <View
         style={
           focused
-            ? [style.textInput, { borderColor: '#87CEEB' }]
+            ? [
+                style.textInput,
+                {
+                  borderColor: Constants.COLORS.textColorMain,
+                  backgroundColor: Constants.COLORS.white,
+                },
+              ]
             : style.textInput
         }
       >
@@ -28,11 +30,6 @@ const CustomInput = ({ ...props }) => {
           value={props?.value}
           onFocus={() => {
             setFocused(true);
-            // if (props.header === 'Email') {
-            //   if (keysRemembered.length !== 0) {
-            //     props?.openHint();
-            //   }
-            // }
           }}
           onBlur={() => {
             setFocused(false);
@@ -40,16 +37,19 @@ const CustomInput = ({ ...props }) => {
           style={style.textInputField}
           onChangeText={props.onChangeText}
           secureTextEntry={
-            props.header === 'Email' ? false : ShowPass ? false : true
+            props.header === 'Password' ? (ShowPass ? false : true) : false
           }
         />
-        {console.log(props?.mailSet)}
         <View style={style.image}>
           <TouchableOpacity
             disabled={props?.header === 'Email' ? true : false}
-            onPress={() => {
-              setShowPass(prev => !prev);
-            }}
+            onPress={
+              props?.header === 'Password'
+                ? () => {
+                    setShowPass(prev => !prev);
+                  }
+                : props?.onClick
+            }
             hitSlop={{
               top: 5,
               left: 20,
