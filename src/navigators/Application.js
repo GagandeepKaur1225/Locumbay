@@ -6,12 +6,8 @@ import React, { useEffect } from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 
 import { Authentification } from '../components/navigator/Authentification';
-import { Constants } from '../shared/constants';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { Guest } from '../components/navigator/Guest';
-import Home from './Home';
-import LoginScreen from '../screens/Login';
-import ResetPass from '../screens/ResetPass';
 import { Settings } from 'react-native-fbsdk-next';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFlipper } from '@react-navigation/devtools';

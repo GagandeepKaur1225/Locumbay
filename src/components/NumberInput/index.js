@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from 'react-native-responsive-screen';
 
 import { Constants } from '../../shared/constants';
 import CountryPicker from 'react-native-country-picker-modal';
 import { TextInput } from 'react-native';
+import { color } from 'react-native-elements/dist/helpers';
 import { style } from './style.js';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 const CustomNumberInput = ({ ...props }) => {
   const [focused, setFocused] = useState();
@@ -31,7 +35,12 @@ const CustomNumberInput = ({ ...props }) => {
   };
   return (
     <View style={style.mainView}>
-      <Text style={style.headerStyle}>{props?.header}</Text>
+      <View style={{ flexDirection: 'row' }}>
+        <Text style={style.headerStyle}>{props?.header}</Text>
+        {props?.required ? (
+          <Text style={{ color: Constants.COLORS.textColorMain }}>*</Text>
+        ) : null}
+      </View>
       <Text />
       <View
         style={
@@ -55,6 +64,10 @@ const CustomNumberInput = ({ ...props }) => {
               }}
             >
               <CountryPicker
+                style={{
+                  width: widthPercentageToDP('50%'),
+                  height: heightPercentageToDP('40%'),
+                }}
                 countryCode={countryCode}
                 withFilter={withFilter}
                 withFlag={withFlag}
@@ -89,6 +102,7 @@ const CustomNumberInput = ({ ...props }) => {
               placeholder={props?.placeholder}
               value={props?.value}
               keyboardType="numeric"
+              maxLength={15}
               onFocus={() => {
                 setFocused(true);
               }}

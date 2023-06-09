@@ -10,7 +10,10 @@ const CustomInput = ({ ...props }) => {
   const [ShowPass, setShowPass] = useState();
   return (
     <View style={style.mainView}>
-      <Text style={style.headerStyle}>{props?.header}</Text>
+      <View style={{ flexDirection: 'row' }}>
+        <Text style={style.headerStyle}>{props?.header}</Text>
+        {props?.required ? <Text style={style.requiredField}>*</Text> : null}
+      </View>
       <Text />
       <View
         style={

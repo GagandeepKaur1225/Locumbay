@@ -23,13 +23,11 @@ export const style = StyleSheet.create({
   manageProfileButton: {
     alignSelf: 'center',
     height: heightPercentageToDP('8%'),
-    justifyContent: 'space-evenly',
     width: widthPercentageToDP('42%'),
     borderRadius: 8,
     alignItems: 'center',
     borderWidth: 2,
     borderColor: Constants.COLORS.primary,
-    flexDirection: 'row',
     backgroundColor: Constants.COLORS.primary,
     marginTop: heightPercentageToDP('7%'),
   },

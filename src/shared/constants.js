@@ -32,6 +32,7 @@ export const Constants = {
     ENTER_PASSWORD: 'Password should not be empty',
     ENTER_MAIL: 'Email should not be empty',
     NUMBER_ERROR: 'Enter correct number',
+    NAME_ERROR: 'Please enter valid name',
   },
   REGEX: {
     EMAIL_REGEX:
@@ -39,6 +40,8 @@ export const Constants = {
     PASSWORD_REGEX:
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !"#$%&'()*+,/:;<=>?@[\]^_`{|}~÷°¬±µ‰¤ƒ¥€£¢ß¿¡©®™§†‡—¶])(?=.{8,})/,
     NUMBER_REGEX: /^[0-9]+$/,
+    NAME_REGEX: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
+    LAST_NAME_REGEX: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]$/,
   },
   HEADINGS: {
     MAIN: 24,
@@ -59,7 +62,7 @@ export const Constants = {
     EMAIL_ADDRESS: 'Email Address',
     ADDRESS: 'Address',
     CITY: 'City',
-    STATE: 'State',
+    REGION: 'Region',
     COUNTRY: 'Country',
     POST_CODE: 'Post Code',
   },

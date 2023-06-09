@@ -1,15 +1,10 @@
 import { Text, TouchableOpacity, View } from 'react-native';
-import {
-  heightPercentageToDP,
-  widthPercentageToDP,
-} from 'react-native-responsive-screen';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Constants } from '../../shared/constants';
 import CustomButton from '../../components/CustomButton';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { LoginManager } from 'react-native-fbsdk-next';
-import { RFValue } from 'react-native-responsive-fontsize';
 import React from 'react';
 import { logOut } from '../../store/userInfo';
 import { style } from './style';

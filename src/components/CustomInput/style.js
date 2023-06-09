@@ -37,4 +37,5 @@ export const style = StyleSheet.create({
     marginRight: widthPercentageToDP('40%'),
     borderWidth: 2,
   },
+  requiredField: { color: Constants.COLORS.textColorMain },
 });
